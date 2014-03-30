@@ -1,0 +1,112 @@
+<html>
+<head>
+<title>Security API test</title>
+<script>
+var recording = "false";
+var pin = "0001";
+function changeImage() {
+if(recording=="false"){
+        document.getElementById("mainClick").src="./stoprec.png";
+		recording = "true";
+		pin = "0001";
+		}
+		else {
+		document.getElementById("mainClick").src="./startrec.png";
+		document.getElementById("infoRaw").innerHTML="Your raw pin entry: " + pin;
+		document.getElementById("infoEncrypt").innerHTML="Your encrypted pin: " + pin * 2345678910;
+		recording = "false";
+		document.getElementById("button1").src="./unclicked.png";
+		document.getElementById("button2").src="./unclicked.png";
+		document.getElementById("button3").src="./unclicked.png";
+		document.getElementById("button4").src="./unclicked.png";
+		document.getElementById("button5").src="./unclicked.png";
+		document.getElementById("button6").src="./unclicked.png";
+		document.getElementById("button7").src="./unclicked.png";
+		document.getElementById("button8").src="./unclicked.png";
+		document.getElementById("button9").src="./unclicked.png";
+		}
+    }
+function buttonOne() {
+if(recording=="true"){
+document.getElementById("button1").src="./clicked.png";
+pin = pin + "1";
+}
+}
+function buttonTwo() {
+if(recording=="true"){
+document.getElementById("button2").src="./clicked.png";
+pin = pin + "2";
+}
+}
+function buttonThree() {
+if(recording=="true"){
+document.getElementById("button3").src="./clicked.png";
+pin = pin + "3";
+}
+}
+function buttonFour() {
+if(recording=="true"){
+document.getElementById("button4").src="./clicked.png";
+pin = pin + "4";
+}
+}
+function buttonFive() {
+if(recording=="true"){
+document.getElementById("button5").src="./clicked.png";
+pin = pin + "5";
+}
+}
+function buttonSix() {
+if(recording=="true"){
+document.getElementById("button6").src="./clicked.png";
+pin = pin + "6";
+}
+}
+function buttonSeven() {
+if(recording=="true"){
+document.getElementById("button7").src="./clicked.png";
+pin = pin + "7";
+}
+}
+function buttonEight() {
+if(recording=="true"){
+document.getElementById("button8").src="./clicked.png";
+pin = pin + "8";
+}
+}
+function buttonNine() {
+if(recording=="true"){
+document.getElementById("button9").src="./clicked.png";
+pin = pin + "9";
+}
+}
+</script>
+</head>
+<body>
+<div id="stats" style="width: 400px; border-style:solid; border-width:medium;">
+Unique Website Id: a0001
+<div id="infoRaw">
+</div>
+<div id="infoEncrypt">
+</div>
+</div>
+<center>
+<font face="verdana"><h2>Press start below to begin!</h2></font>
+<div style="width: 300px; height: 400px; border: 5px groove #98bf21;padding:3px;">
+<img src='./startrec.png' width=300 height=100 id="mainClick" onClick='changeImage();'>
+<div id="keypad" style="width: 300px;">
+<div style="float: left; width: 100px;"><img src="./unclicked.png" id="button1" onmouseover="buttonOne()"></div>
+<div style="float: left; width: 100px;"><img src="./unclicked.png" id="button2" onmouseover="buttonTwo()"></div>
+<div style="float: left; width: 100px;"><img src="./unclicked.png" id="button3" onmouseover="buttonThree()"></div>
+<div style="float: left; width: 100px;"><img src="./unclicked.png" id="button4" onmouseover="buttonFour()"></div>
+<div style="float: left; width: 100px;"><img src="./unclicked.png" id="button5" onmouseover="buttonFive()"></div>
+<div style="float: left; width: 100px;"><img src="./unclicked.png" id="button6" onmouseover="buttonSix()"></div>
+<div style="float: left; width: 100px;"><img src="./unclicked.png" id="button7" onmouseover="buttonSeven()"></div>
+<div style="float: left; width: 100px;"><img src="./unclicked.png" id="button8" onmouseover="buttonEight()"></div>
+<div style="float: left; width: 100px;"><img src="./unclicked.png" id="button9" onmouseover="buttonNine()"></div>
+</div>
+</div><br><br>
+<a href="./info.html">Information </a> | <a href="#"> Github Repo </a>
+</center>
+</body>
+</html>
